@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--
+    IT 3203 Web Development Project - Milestone 1
+    Page: Topic 2 - Comparing the Big Four frameworks
+    Uses a two-column grid layout (article + "On this page" sidebar).
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A side-by-side comparison of React, Angular, Vue and Svelte.">
+    <title>JavaScript Frameworks | Comparison</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;family=Source+Sans+3:wght@400;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Site header with the main menu (identical on every page) -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="site-name" href="index.html">JS<span>/</span>Frameworks</a>
+            <nav class="main-nav" aria-label="Main menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="evolution.html">Evolution</a></li>
+                    <li><a class="active" href="comparison.html" aria-current="page">Comparison</a></li>
+                    <li><a href="concepts.html">Key Concepts</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page banner -->
+    <section class="hero">
+        <div class="hero-inner">
+            <span class="eyebrow">Topic 02</span>
+            <h1>Comparing the Big Four</h1>
+            <p>React, Angular, Vue and Svelte all build interfaces from components, but
+               they make different trade-offs in size, structure and learning curve.</p>
+        </div>
+    </section>
+
+    <!-- Two-column layout: article on the left, sidebar on the right -->
+    <div class="page with-sidebar">
+
+        <main>
+            <section id="overview">
+                <h2>At a Glance</h2>
+                <p>The table below summarizes the four frameworks most often discussed in
+                   developer surveys such as the Stack Overflow Developer Survey and the
+                   State of JavaScript survey.</p>
+                <div class="table-wrap">
+                    <table>
+                        <caption>Table 2. Comparison of popular JavaScript frameworks</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Feature</th>
+                                <th scope="col">React</th>
+                                <th scope="col">Angular</th>
+                                <th scope="col">Vue</th>
+                                <th scope="col">Svelte</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">First release</th>
+                                <td>2013</td>
+                                <td>2016 (AngularJS 2010)</td>
+                                <td>2014</td>
+                                <td>2016</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Created by</th>
+                                <td>Meta (Facebook)</td>
+                                <td>Google</td>
+                                <td>Evan You and community</td>
+                                <td>Rich Harris and community</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Type</th>
+                                <td>UI library</td>
+                                <td>Full framework</td>
+                                <td>Progressive framework</td>
+                                <td>Compiler</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Language</th>
+                                <td>JavaScript + JSX</td>
+                                <td>TypeScript</td>
+                                <td>JavaScript + HTML templates</td>
+                                <td>JavaScript + HTML templates</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Updating the page</th>
+                                <td>Virtual DOM</td>
+                                <td>Change detection / signals</td>
+                                <td>Virtual DOM + reactivity</td>
+                                <td>Compiled direct updates</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Learning curve</th>
+                                <td>Moderate</td>
+                                <td>Steep</td>
+                                <td>Gentle</td>
+                                <td>Gentle</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Best known for</th>
+                                <td>Huge ecosystem and job market</td>
+                                <td>Large enterprise apps</td>
+                                <td>Approachability</td>
+                                <td>Small, fast output</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="react">
+                <h2>React</h2>
+                <p>React describes itself as a library for building user interfaces rather
+                   than a complete framework. It handles the view layer, and developers add
+                   other libraries for routing or data fetching. Components are written with
+                   <strong>JSX</strong>, a syntax that mixes HTML-like tags into JavaScript.
+                   Because it is the most widely used option, React has the largest
+                   collection of tutorials, packages and job listings.</p>
+            </section>
+
+            <section id="angular">
+                <h2>Angular</h2>
+                <p>Angular is a full, &ldquo;batteries-included&rdquo; framework. Routing,
+                   forms, HTTP requests and testing tools are all built in, and every project
+                   follows the same structure. It uses <strong>TypeScript</strong>, which
+                   adds types to JavaScript. That consistency is valuable for big teams, but
+                   it means there is more to learn before writing the first page.</p>
+            </section>
+
+            <section id="vue">
+                <h2>Vue</h2>
+                <p>Vue calls itself a <em>progressive</em> framework: you can add it to a
+                   single part of an existing page, or use it to build an entire application.
+                   Its templates look like regular HTML, which makes it comfortable for people
+                   who already know HTML and CSS.</p>
+            </section>
+
+            <section id="svelte">
+                <h2>Svelte</h2>
+                <p>Svelte takes a different approach. It is a <strong>compiler</strong>: it
+                   turns components into small, plain JavaScript during the build, so there
+                   is no large framework running in the browser. The result is usually less
+                   code sent to the user and very fast updates.</p>
+            </section>
+
+            <section id="choosing">
+                <h2>Choosing a Framework</h2>
+                <figure>
+                    <img src="images/component-tree.svg" width="700" height="320"
+                         alt="Diagram of an App component containing Header, ProductList and Cart components, with ProductList containing several ProductCard components">
+                    <figcaption>Figure 2. Every framework here builds a page as a tree of components.</figcaption>
+                </figure>
+                <p>There is no single best framework. Questions worth asking include:</p>
+                <ol>
+                    <li><strong>Team experience:</strong> what does the team already know?</li>
+                    <li><strong>Project size:</strong> a small widget and a large enterprise
+                        system have different needs.</li>
+                    <li><strong>Ecosystem:</strong> are there existing packages for the features
+                        you need?</li>
+                    <li><strong>Performance:</strong> does the app need to load quickly on slow
+                        phones and networks?</li>
+                    <li><strong>Long-term support:</strong> is the project actively maintained?</li>
+                </ol>
+                <p class="callout"><strong>Tip for beginners:</strong> the concepts on the
+                   <a href="concepts.html">Key Concepts</a> page transfer between all four
+                   frameworks, so learning one well makes the others much easier.</p>
+            </section>
+        </main>
+
+        <!-- Sidebar: quick links to sections on this page -->
+        <aside class="sidebar">
+            <h2>On this page</h2>
+            <ul>
+                <li><a href="#overview">At a Glance</a></li>
+                <li><a href="#react">React</a></li>
+                <li><a href="#angular">Angular</a></li>
+                <li><a href="#vue">Vue</a></li>
+                <li><a href="#svelte">Svelte</a></li>
+                <li><a href="#choosing">Choosing a Framework</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <!-- Footer: class project notice (same on every page) -->
+    <footer id="site-footer">
+        <p>This website is a class project for IT 3203 Web Development at Kennesaw State University.</p>
+        <p>Course website: <a href="https://ksuweb.github.io/IT3203/">ksuweb.github.io/IT3203</a></p>
+    </footer>
+
+</body>
+</html>

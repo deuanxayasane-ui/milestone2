@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--
+    IT 3203 Web Development Project - Milestone 1
+    Page: Topic 1 - The Evolution of JavaScript Frameworks
+    Uses a two-column grid layout (article + "On this page" sidebar).
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="How front-end development moved from static pages and jQuery to component-based JavaScript frameworks.">
+    <title>JavaScript Frameworks | Evolution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;family=Source+Sans+3:wght@400;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Site header with the main menu (identical on every page) -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="site-name" href="index.html">JS<span>/</span>Frameworks</a>
+            <nav class="main-nav" aria-label="Main menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="evolution.html" aria-current="page">Evolution</a></li>
+                    <li><a href="comparison.html">Comparison</a></li>
+                    <li><a href="concepts.html">Key Concepts</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page banner -->
+    <section class="hero">
+        <div class="hero-inner">
+            <span class="eyebrow">Topic 01</span>
+            <h1>The Evolution of Frameworks</h1>
+            <p>Why developers stopped writing every page update by hand, and how that
+               led to the component-based tools used today.</p>
+        </div>
+    </section>
+
+    <!-- Two-column layout: article on the left, sidebar on the right -->
+    <div class="page with-sidebar">
+
+        <main>
+            <section id="static-web">
+                <h2>The Static Web (1990s)</h2>
+                <p>The first websites were collections of HTML documents. Every click on a
+                   link asked the server for an entirely new page. JavaScript, created by
+                   Brendan Eich at Netscape in 1995, was first used for small effects such
+                   as checking a form field before it was submitted.</p>
+            </section>
+
+            <section id="ajax-jquery">
+                <h2>Ajax and jQuery (2005&ndash;2010)</h2>
+                <p>In 2005 the term <strong>Ajax</strong> described a technique where the
+                   browser requests data in the background and updates only part of the
+                   page. Applications like Gmail and Google Maps showed that a website
+                   could feel like a desktop program.</p>
+                <p>Writing that code was difficult because browsers behaved differently.
+                   <strong>jQuery</strong>, released in 2006, hid those differences behind
+                   a short, friendly syntax and quickly became the most used JavaScript
+                   library on the web. A typical jQuery update looked like this:</p>
+                <p><code>$("#cart-count").text(items.length);</code></p>
+                <p>The developer had to remember every place on the page that displayed
+                   the cart count and update each one manually. In a large app, missing a
+                   single update meant the screen showed the wrong information.</p>
+            </section>
+
+            <section id="mvc">
+                <h2>The First Frameworks (2010&ndash;2013)</h2>
+                <p>A wave of frameworks borrowed the <strong>Model&ndash;View&ndash;Controller
+                   (MVC)</strong> pattern from server-side programming to separate data from
+                   presentation:</p>
+                <ul>
+                    <li><strong>Backbone.js</strong> (2010) added models and collections to organize data.</li>
+                    <li><strong>AngularJS</strong> (2010, Google) introduced two-way data binding,
+                        so the page and the data updated each other automatically.</li>
+                    <li><strong>Ember.js</strong> (2011) focused on strong conventions for large,
+                        ambitious applications.</li>
+                </ul>
+            </section>
+
+            <section id="components">
+                <h2>The Component Era (2013&ndash;today)</h2>
+                <p>In 2013 Facebook released <strong>React</strong>, which treated the user
+                   interface as a tree of small, reusable <strong>components</strong>. Instead
+                   of telling the browser <em>how</em> to change the page, a developer
+                   describes <em>what</em> the page should look like for the current data,
+                   and React works out the changes. Vue (2014), Angular (a complete rewrite
+                   of AngularJS, 2016) and Svelte (2016) all adopted the component model.</p>
+
+                <figure>
+                    <img src="images/timeline.svg" width="760" height="230"
+                         alt="Timeline from 1995 to 2016 showing JavaScript, Ajax, jQuery, AngularJS, React, Vue, Angular and Svelte">
+                    <figcaption>Figure 1. Major milestones in front-end JavaScript development.</figcaption>
+                </figure>
+
+                <h3>Milestone timeline</h3>
+                <ol class="timeline">
+                    <li><span class="year">1995</span> JavaScript is created at Netscape.</li>
+                    <li><span class="year">2005</span> &ldquo;Ajax&rdquo; popularizes background data requests.</li>
+                    <li><span class="year">2006</span> jQuery is released.</li>
+                    <li><span class="year">2010</span> Backbone.js and AngularJS appear.</li>
+                    <li><span class="year">2013</span> React is open-sourced by Facebook.</li>
+                    <li><span class="year">2014</span> Vue.js is released by Evan You.</li>
+                    <li><span class="year">2016</span> Angular 2 and Svelte are released.</li>
+                    <li><span class="year">2020s</span> Meta-frameworks such as Next.js and Nuxt add server rendering.</li>
+                </ol>
+            </section>
+
+            <section id="summary">
+                <h2>How the Approach Changed</h2>
+                <div class="table-wrap">
+                    <table>
+                        <caption>Table 1. Three generations of front-end development</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Era</th>
+                                <th scope="col">Main tool</th>
+                                <th scope="col">How the page updates</th>
+                                <th scope="col">Main drawback</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Static web</td>
+                                <td>HTML + server</td>
+                                <td>Full page reload</td>
+                                <td>Slow, not interactive</td>
+                            </tr>
+                            <tr>
+                                <td>Ajax / jQuery</td>
+                                <td>jQuery</td>
+                                <td>Developer edits the DOM by hand</td>
+                                <td>Hard to keep large apps consistent</td>
+                            </tr>
+                            <tr>
+                                <td>Components</td>
+                                <td>React, Vue, Angular, Svelte</td>
+                                <td>Framework updates the DOM from state</td>
+                                <td>Learning curve and build tooling</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="callout"><strong>Takeaway:</strong> each step moved more of the
+                   repetitive work from the developer to the tool, so developers could focus
+                   on what the application should do.</p>
+            </section>
+        </main>
+
+        <!-- Sidebar: quick links to sections on this page -->
+        <aside class="sidebar">
+            <h2>On this page</h2>
+            <ul>
+                <li><a href="#static-web">The Static Web</a></li>
+                <li><a href="#ajax-jquery">Ajax and jQuery</a></li>
+                <li><a href="#mvc">The First Frameworks</a></li>
+                <li><a href="#components">The Component Era</a></li>
+                <li><a href="#summary">How the Approach Changed</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <!-- Footer: class project notice (same on every page) -->
+    <footer id="site-footer">
+        <p>This website is a class project for IT 3203 Web Development at Kennesaw State University.</p>
+        <p>Course website: <a href="https://ksuweb.github.io/IT3203/">ksuweb.github.io/IT3203</a></p>
+    </footer>
+
+</body>
+</html>

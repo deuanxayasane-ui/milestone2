@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--
+    IT 3203 Web Development Project - Milestone 1
+    Page: Key Concepts - seven ideas shared by modern JavaScript frameworks.
+    Each concept is a <section class="concept"> panel.
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Seven key concepts behind JavaScript frameworks: components, state, props, the virtual DOM, data binding, routing and build tools.">
+    <title>JavaScript Frameworks | Key Concepts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;family=Source+Sans+3:wght@400;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Site header with the main menu (identical on every page) -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="site-name" href="index.html">JS<span>/</span>Frameworks</a>
+            <nav class="main-nav" aria-label="Main menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="evolution.html">Evolution</a></li>
+                    <li><a href="comparison.html">Comparison</a></li>
+                    <li><a class="active" href="concepts.html" aria-current="page">Key Concepts</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page banner -->
+    <section class="hero">
+        <div class="hero-inner">
+            <span class="eyebrow">Key Concepts</span>
+            <h1>Seven Ideas Behind Every Framework</h1>
+            <p>The names and syntax differ, but React, Angular, Vue and Svelte are built
+               on the same small set of ideas.</p>
+        </div>
+    </section>
+
+    <!-- Two-column layout: concepts on the left, sidebar on the right -->
+    <div class="page with-sidebar">
+
+        <main>
+            <section class="concept" id="components">
+                <h2><span class="num">01</span> Components</h2>
+                <p>A component is a self-contained piece of the interface, such as a button,
+                   a navigation bar or a product card. It bundles its own structure (HTML),
+                   appearance (CSS) and behavior (JavaScript). Components can contain other
+                   components, so a whole page becomes a tree of small, reusable parts.</p>
+            </section>
+
+            <section class="concept" id="state">
+                <h2><span class="num">02</span> State</h2>
+                <p>State is the data a component remembers while the app runs, for example the
+                   items in a shopping cart or whether a menu is open. When state changes, the
+                   framework re-renders the parts of the page that depend on it. This is the
+                   main reason frameworks exist: the screen always matches the data.</p>
+            </section>
+
+            <section class="concept" id="props">
+                <h2><span class="num">03</span> Props (Inputs)</h2>
+                <p>Props are values a parent component passes down to a child, much like
+                   attributes on an HTML tag. A <code>ProductCard</code> might receive a
+                   product name and price as props. Data flows <em>down</em> through props,
+                   while children send messages <em>up</em> through events.</p>
+            </section>
+
+            <section class="concept" id="virtual-dom">
+                <h2><span class="num">04</span> The Virtual DOM</h2>
+                <p>Changing the real browser DOM is relatively slow. React and Vue keep a
+                   lightweight copy of the page in memory called the <strong>virtual DOM</strong>.
+                   When state changes, they build a new virtual version, compare it with the
+                   old one (a process called <em>diffing</em>) and apply only the differences
+                   to the real page.</p>
+                <figure>
+                    <img src="images/virtual-dom.svg" width="700" height="260"
+                         alt="Diagram comparing an old and a new virtual DOM tree, with only the changed node patched in the real DOM">
+                    <figcaption>Figure 3. Diffing finds the one node that changed and updates only that node.</figcaption>
+                </figure>
+                <p>Svelte reaches the same goal differently: its compiler works out ahead of
+                   time exactly which lines of the page depend on which data.</p>
+            </section>
+
+            <section class="concept" id="binding">
+                <h2><span class="num">05</span> Declarative Rendering and Data Binding</h2>
+                <p>With jQuery, code is <em>imperative</em>: &ldquo;find this element, then
+                   change its text.&rdquo; Frameworks are <em>declarative</em>: the developer
+                   writes a template that says what the page should look like for any state,
+                   such as <code>&lt;p&gt;Items: {count}&lt;/p&gt;</code>. Data binding keeps
+                   that template connected to the data, and two-way binding also updates the
+                   data when a user types into a form field.</p>
+            </section>
+
+            <section class="concept" id="routing">
+                <h2><span class="num">06</span> Client-Side Routing</h2>
+                <p>In a single-page application, the browser loads one HTML page and the
+                   framework swaps components in and out as the user navigates. A router maps
+                   each URL, such as <code>/products/42</code>, to a component and updates the
+                   address bar without a full page reload, which makes navigation feel
+                   instant.</p>
+            </section>
+
+            <section class="concept" id="tooling">
+                <h2><span class="num">07</span> Build Tools</h2>
+                <p>Framework code such as JSX, TypeScript or <code>.vue</code> files cannot run
+                   in the browser as written. A build tool like <strong>Vite</strong> or
+                   webpack converts it into plain JavaScript, combines files into bundles,
+                   removes unused code and provides a development server that refreshes the
+                   page as you edit.</p>
+            </section>
+
+            <!-- Summary table of all seven concepts -->
+            <section id="summary">
+                <h2>Summary</h2>
+                <div class="table-wrap">
+                    <table>
+                        <caption>Table 3. Key concepts and the problem each one solves</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Concept</th>
+                                <th scope="col">Problem it solves</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Components</td><td>Repeated, tangled page code</td></tr>
+                            <tr><td>State</td><td>Screen falling out of sync with data</td></tr>
+                            <tr><td>Props</td><td>Sharing data between components</td></tr>
+                            <tr><td>Virtual DOM</td><td>Slow, unnecessary page updates</td></tr>
+                            <tr><td>Declarative rendering</td><td>Manual, error-prone DOM changes</td></tr>
+                            <tr><td>Routing</td><td>Full page reloads on every click</td></tr>
+                            <tr><td>Build tools</td><td>Browser cannot run framework code directly</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar: quick links to each concept -->
+        <aside class="sidebar">
+            <h2>On this page</h2>
+            <ul>
+                <li><a href="#components">Components</a></li>
+                <li><a href="#state">State</a></li>
+                <li><a href="#props">Props</a></li>
+                <li><a href="#virtual-dom">The Virtual DOM</a></li>
+                <li><a href="#binding">Declarative Rendering</a></li>
+                <li><a href="#routing">Client-Side Routing</a></li>
+                <li><a href="#tooling">Build Tools</a></li>
+                <li><a href="#summary">Summary</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <!-- Footer: class project notice (same on every page) -->
+    <footer id="site-footer">
+        <p>This website is a class project for IT 3203 Web Development at Kennesaw State University.</p>
+        <p>Course website: <a href="https://ksuweb.github.io/IT3203/">ksuweb.github.io/IT3203</a></p>
+    </footer>
+
+</body>
+</html>

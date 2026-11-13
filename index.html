@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+    IT 3203 Web Development Project - Milestone 1
+    Page: Homepage (cover page)
+    Contains the title, abstract, key terms and a table of contents
+    that links to every other page of the site.
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An introduction to JavaScript frameworks: their history, how they compare, and the key concepts behind them.">
+    <title>JavaScript Frameworks | Home</title>
+    <!-- Web fonts used by the stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;family=Source+Sans+3:wght@400;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+    <!-- The one shared stylesheet for the whole site -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Site header with the main menu (identical on every page) -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="site-name" href="index.html">JS<span>/</span>Frameworks</a>
+            <nav class="main-nav" aria-label="Main menu">
+                <ul>
+                    <li><a class="active" href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="evolution.html">Evolution</a></li>
+                    <li><a href="comparison.html">Comparison</a></li>
+                    <li><a href="concepts.html">Key Concepts</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero banner: title and short introduction, with an illustration -->
+    <section class="hero hero-home">
+        <div class="hero-inner">
+            <div>
+                <span class="eyebrow">IT 3203 Research Project</span>
+                <h1>JavaScript Frameworks</h1>
+                <p>How modern tools like React, Angular, Vue and Svelte changed the way
+                   interactive websites are built, and what every new web developer
+                   should understand about them.</p>
+            </div>
+            <img src="images/hero.svg" width="480" height="340"
+                 alt="Illustration of a browser window built from nested component blocks">
+        </div>
+    </section>
+
+    <main class="page">
+
+        <!-- Abstract -->
+        <section>
+            <h2>Abstract</h2>
+            <p class="lead">A JavaScript framework is a collection of pre-written code and
+               conventions that gives developers a structure for building the
+               interactive part of a website or web application.</p>
+            <p>Early websites updated the page by reloading it from the server, and
+               later by changing pieces of the page directly with libraries such as
+               jQuery. As web applications grew to the size of desktop software, that
+               approach became hard to maintain. Frameworks solved this by organizing
+               the interface into reusable <strong>components</strong> and by keeping
+               the screen automatically in sync with the application's
+               <strong>state</strong>.</p>
+            <p>This site traces how frameworks evolved, compares the four most widely
+               used options today, and explains the core ideas they share. The goal is
+               to help a beginner understand what a framework does for them and how to
+               choose one for a project.</p>
+        </section>
+
+        <!-- Key terms, shown as a definition list -->
+        <section>
+            <h2>Key Terms</h2>
+            <dl class="terms">
+                <div>
+                    <dt>Framework</dt>
+                    <dd>Code that provides the structure of an app and calls your code.</dd>
+                </div>
+                <div>
+                    <dt>Library</dt>
+                    <dd>Code that you call when you need it, such as jQuery.</dd>
+                </div>
+                <div>
+                    <dt>Component</dt>
+                    <dd>A self-contained, reusable piece of the user interface.</dd>
+                </div>
+                <div>
+                    <dt>DOM</dt>
+                    <dd>The browser's tree of objects that represents the page.</dd>
+                </div>
+                <div>
+                    <dt>Single-Page Application (SPA)</dt>
+                    <dd>An app that loads once and updates the view without full reloads.</dd>
+                </div>
+                <div>
+                    <dt>State</dt>
+                    <dd>The data an app holds at a given moment that drives what is shown.</dd>
+                </div>
+            </dl>
+        </section>
+
+        <!-- Table of contents linking to the other pages -->
+        <section>
+            <h2>Table of Contents</h2>
+            <ol class="card-grid">
+                <li>
+                    <a class="card" href="evolution.html">
+                        <span class="num">01</span>
+                        <h3>The Evolution of Frameworks</h3>
+                        <p>From static pages and jQuery to today's component-based tools.</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="comparison.html">
+                        <span class="num">02</span>
+                        <h3>Comparing the Big Four</h3>
+                        <p>React, Angular, Vue and Svelte side by side.</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="concepts.html">
+                        <span class="num">03</span>
+                        <h3>Key Concepts</h3>
+                        <p>Components, state, the virtual DOM, routing and more.</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="references.html">
+                        <span class="num">04</span>
+                        <h3>References &amp; Resources</h3>
+                        <p>Sources used for this research and where to learn more.</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="quiz.html">
+                        <span class="num">05</span>
+                        <h3>Knowledge Check Quiz</h3>
+                        <p>Test your knowledge with a timed, 10-question self-assessment.</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="about.html">
+                        <span class="num">06</span>
+                        <h3>About</h3>
+                        <p>Who built this site and why.</p>
+                    </a>
+                </li>
+            </ol>
+        </section>
+
+    </main>
+
+    <!-- Footer: class project notice (same on every page) -->
+    <footer id="site-footer">
+        <p>This website is a class project for IT 3203 Web Development at Kennesaw State University.</p>
+        <p>Course website: <a href="https://ksuweb.github.io/IT3203/">ksuweb.github.io/IT3203</a></p>
+    </footer>
+
+</body>
+</html>
